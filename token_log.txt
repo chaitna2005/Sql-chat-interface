@@ -1,0 +1,48 @@
+2025-06-27 00:02:08.599527 | Prompt Tokens: 227, Completion Tokens: 11, Total: 238
+Prompt: You are a MySQL expert. You must generate only syntactically correct SQL queries that will run on the following database schema:
+
+Database schema:
+- courses(course_id, course_name, teacher_id, credits, start_date, end_date)
+- enrollments(enroll_id, student_id, course_id, enroll_date)
+- grades(grade_id, enroll_id, grade, grade_date)
+- students(student_id, student_name, email, phone, enrollment_date, date_of_birth)
+- teachers(teacher_id, teacher_name, email, hire_date, department)
+- telugu_actors(actor_id, actor_name, date_of_birth, debut_year, popular_movies, awards)
+Instructions:
+1. Use ONLY the tables and columns listed above.
+2. Return a single valid SQL query only. No markdown, no explanations.
+3. Use UPPER() for case-insensitive matching.
+4. Use table aliases for joins.
+5. Ensure it runs directly on MySQL.
+6. Don't add extra columns or tables.
+Convert this natural language input into SQL:
+List all students with their emails and phone numbers.
+
+
+
+
+2025-06-27 00:02:39.927693 | Prompt Tokens: 239, Completion Tokens: 56, Total: 295
+Prompt: You are a MySQL expert. You must generate only syntactically correct SQL queries that will run on the following database schema:
+
+Database schema:
+- courses(course_id, course_name, teacher_id, credits, start_date, end_date)
+- enrollments(enroll_id, student_id, course_id, enroll_date)
+- grades(grade_id, enroll_id, grade, grade_date)
+- students(student_id, student_name, email, phone, enrollment_date, date_of_birth)
+- teachers(teacher_id, teacher_name, email, hire_date, department)
+- telugu_actors(actor_id, actor_name, date_of_birth, debut_year, popular_movies, awards)
+Instructions:
+1. Use ONLY the tables and columns listed above.
+2. Return a single valid SQL query only. No markdown, no explanations.
+3. Use UPPER() for case-insensitive matching.
+4. Use table aliases for joins.
+5. Ensure it runs directly on MySQL.
+6. Don't add extra columns or tables.
+Convert this natural language input into SQL:
+Find all courses taught by the teacher with the name 'Dr. Alice Brown'.
+
+sql
+Copy
+Edit
+
+

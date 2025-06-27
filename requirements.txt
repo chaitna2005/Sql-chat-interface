@@ -1,0 +1,4 @@
+openai
+gradio
+mysql-connector-python
+python-dotenv
