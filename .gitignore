@@ -1,2 +1,18 @@
 .env
 .venv
+# IDE files
+.idea/
+
+# Python cache
+__pycache__/
+
+# Gradio files
+.gradio/
+
+# Logs
+token_log.txt
+
+# Other typical ignores
+*.pyc
+*.pyo
+*.pyd
