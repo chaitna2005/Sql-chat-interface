@@ -11,13 +11,29 @@ A simple SQL-powered chat interface built with Python and OpenAI API.
 
 The project currently includes the following key features, each tested and confirmed working as expected:
 
-| Feature                          | ✅ Status    |
-|---------------------------------|-------------|
-| Natural language to SQL via GPT  | Working     |
-| MySQL live schema reader         | Working     |
-| Markdown tables in Gradio chat   | Clean & neat|
-| Token logging to file (`token_log.txt`) | Accurate |
-| Modular code (split into files)  | Organized   |
+| Feature                                  | ✅ Status     |
+|------------------------------------------|--------------|
+| Natural language to SQL via GPT          | Working      |
+| MySQL live schema reader                 | Working      |
+| PostgreSQL live schema reader            | Working      |
+| Markdown tables in Gradio chat           | Clean & neat |
+| Token logging to file (`token_log.txt`)  | Accurate     |
+| Modular code (split into files)          | Organized    |
+| Multi-database support (.env-based)      | ✅ Implemented|
+
+## 🔄 Latest Additions: PostgreSQL Support & Improved Flexibility
+
+- **PostgreSQL Integration**  
+  The system now supports both MySQL and PostgreSQL. Just switch the `DB_TYPE` value in the `.env` file (`mysql` or `postgres`) and the app will connect accordingly.
+
+- **Dynamic Schema Description**  
+  Schema is read live from either MySQL or PostgreSQL and used to generate more accurate SQL queries based on the actual structure.
+
+- **Database-Agnostic Query Execution**  
+  All query execution logic now handles both PostgreSQL and MySQL backends using shared code paths with proper drivers (`psycopg2` and `mysql-connector-python`).
+
+- **Improved Connection Management**  
+  The app now connects through `password_db.py`, ensuring centralized and reusable logic for database access.
 
 ## 🔒 Recent Improvements: Enhanced User Authentication & UI
 
@@ -44,8 +60,10 @@ The project currently includes the following key features, each tested and confi
 1. Clone this repo  
 2. Create and activate your virtual environment  
 3. Install dependencies from `requirements.txt`  
-4. Run `app.py`  
+4. Create a `.env` file with your DB credentials and set `DB_TYPE` to either `mysql` or `postgres`  
+5. Run `app.py`  
 
 ## License
 This project is licensed under the MIT License.
+
 
